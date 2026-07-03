@@ -1,0 +1,68 @@
+<svg viewBox="0 0 820 600" xmlns="http://www.w3.org/2000/svg" font-family="'Pretendard', -apple-system, 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
+  <defs>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#ef4444"/>
+    </marker>
+    <g id="imgIcon">
+      <circle cx="18" cy="16" r="7" fill="#bfdbfe"/>
+      <path d="M0 52 L28 24 L48 44 L70 22 L110 52 Z" fill="#93c5fd"/>
+    </g>
+  </defs>
+
+  <text x="410" y="30" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">이미지가 도착할 때 레이아웃이 밀리는 이유</text>
+
+  <!-- column headers -->
+  <text x="275" y="72" text-anchor="middle" font-size="14" font-weight="600" fill="#475569">로드 전 (이미지 도착 전)</text>
+  <text x="665" y="72" text-anchor="middle" font-size="14" font-weight="600" fill="#475569">로드 후 (이미지 도착)</text>
+
+  <!-- ============ ROW 1 : no attributes ============ -->
+  <text x="14" y="190" font-size="14" font-weight="700" fill="#b91c1c">①</text>
+  <text x="14" y="210" font-size="12" font-weight="600" fill="#b91c1c">속성 없음</text>
+
+  <!-- row1 card: 로드 전 -->
+  <rect x="170" y="90" width="210" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="185" y="106" width="110" height="14" rx="4" fill="#cbd5e1"/>
+  <rect x="185" y="132" width="180" height="10" rx="3" fill="#e2e8f0"/>
+  <rect x="185" y="148" width="180" height="10" rx="3" fill="#e2e8f0"/>
+  <rect x="185" y="164" width="130" height="10" rx="3" fill="#e2e8f0"/>
+  <text x="275" y="205" text-anchor="middle" font-size="11" fill="#94a3b8">이미지 자리 예약 안 됨</text>
+  <line x1="185" y1="132" x2="590" y2="132" stroke="#f87171" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- row1 card: 로드 후 -->
+  <rect x="560" y="90" width="210" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="575" y="106" width="110" height="14" rx="4" fill="#cbd5e1"/>
+  <rect x="575" y="132" width="180" height="72" rx="6" fill="#dbeafe"/>
+  <g transform="translate(608,142) scale(0.9)"><use href="#imgIcon"/></g>
+  <rect x="575" y="216" width="180" height="10" rx="3" fill="#e2e8f0"/>
+  <rect x="575" y="232" width="180" height="10" rx="3" fill="#e2e8f0"/>
+  <rect x="575" y="248" width="130" height="10" rx="3" fill="#e2e8f0"/>
+  <!-- shift arrow -->
+  <line x1="540" y1="132" x2="540" y2="216" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <text x="533" y="180" text-anchor="end" font-size="11" font-weight="700" fill="#ef4444">밀림</text>
+  <rect x="560" y="278" width="210" height="0"/>
+  <text x="665" y="292" text-anchor="middle" font-size="12" font-weight="700" fill="#ef4444">텍스트가 아래로 점프 → CLS 발생</text>
+
+  <!-- ============ ROW 2 : with attributes ============ -->
+  <text x="14" y="440" font-size="14" font-weight="700" fill="#047857">②</text>
+  <text x="14" y="460" font-size="12" font-weight="600" fill="#047857">속성 있음</text>
+
+  <!-- row2 card: 로드 전 -->
+  <rect x="170" y="340" width="210" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="185" y="356" width="110" height="14" rx="4" fill="#cbd5e1"/>
+  <rect x="185" y="382" width="180" height="72" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="275" y="422" text-anchor="middle" font-size="12" font-weight="600" fill="#64748b">예약된 공간</text>
+  <rect x="185" y="466" width="180" height="10" rx="3" fill="#e2e8f0"/>
+  <rect x="185" y="482" width="180" height="10" rx="3" fill="#e2e8f0"/>
+  <rect x="185" y="498" width="130" height="10" rx="3" fill="#e2e8f0"/>
+
+  <!-- row2 card: 로드 후 -->
+  <rect x="560" y="340" width="210" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="575" y="356" width="110" height="14" rx="4" fill="#cbd5e1"/>
+  <rect x="575" y="382" width="180" height="72" rx="6" fill="#dbeafe"/>
+  <g transform="translate(608,392) scale(0.9)"><use href="#imgIcon"/></g>
+  <rect x="575" y="466" width="180" height="10" rx="3" fill="#e2e8f0"/>
+  <rect x="575" y="482" width="180" height="10" rx="3" fill="#e2e8f0"/>
+  <rect x="575" y="498" width="130" height="10" rx="3" fill="#e2e8f0"/>
+  <line x1="185" y1="466" x2="755" y2="466" stroke="#34d399" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="665" y="540" text-anchor="middle" font-size="12" font-weight="700" fill="#059669">이미지가 예약 공간을 채움 → 이동 없음 ✓</text>
+</svg>
