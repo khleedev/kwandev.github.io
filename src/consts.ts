@@ -1,8 +1,8 @@
 import type { Metadata, Site, Socials } from "@types";
 
 export const SITE: Site = {
-  TITLE: "Kwan dev",
-  DESCRIPTION: "Kwan dev is a blog about web development and programming.",
+  TITLE: "khlee dev",
+  DESCRIPTION: "웹 프론트엔드에서 풀스택으로, 개발하며 배우고 고민한 내용을 기록합니다.",
   EMAIL: "rudghks7816@gmail.com",
   NUM_POSTS_ON_HOMEPAGE: 5,
   NUM_NOTES_ON_HOMEPAGE: 3,
@@ -10,7 +10,7 @@ export const SITE: Site = {
 
 export const HOME: Metadata = {
   TITLE: "Home",
-  DESCRIPTION: "Kwan dev is a blog about web development and programming.",
+  DESCRIPTION: SITE.DESCRIPTION,
 };
 
 export const BLOG: Metadata = {

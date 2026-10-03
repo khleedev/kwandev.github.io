@@ -6,10 +6,10 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://twentyquad.com",
+  site: "https://khlee.2e16.me",
   integrations: [
     sitemap({
-      filter: (page) => !page.startsWith("https://twentyquad.com/post/"),
+      filter: (page) => !page.startsWith("https://khlee.2e16.me/post/"),
     }),
     mdx(),
     pagefind(),
